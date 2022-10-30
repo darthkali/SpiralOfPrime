@@ -1,0 +1,22 @@
+{
+  "name": "spiralofprime-p5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darthkali/SpiralOfPrime.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darthkali/SpiralOfPrime/issues"
+  },
+  "homepage": "https://github.com/darthkali/SpiralOfPrime#readme",
+  "dependencies": {
+    "p5": "^1.5.0"
+  }
+}
