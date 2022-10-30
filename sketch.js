@@ -1,26 +1,30 @@
+const width = 1920;
+const height = 1080;
+
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(width, height);
     noLoop();
 }
 
 function draw() {
-    let x = 200;
-    let y = 200;
+    let x = width / 2;
+    let y = height / 2;
     let amount = 0;
     let direction = 0
-    let step = 20
-    let cycleSize = 10
-    ellipse(x, y, cycleSize + 3, cycleSize + 3);
-    ellipse(x, y, cycleSize, cycleSize);
+    let step = 5
+    let cycleSize = 5
+    let count = 0
 
-    for (let count = 0; count < 35; count++) {
+    while (count < 50000) {
 
         if (count % 2 === 0) {
             amount++
         }
         for (let n = 0; n < amount; n++) {
-            let xOld = x
-            let yOld = y
+            if (isPrime(count)) {
+                ellipse(x, y, cycleSize, cycleSize);
+            }
+
             switch (direction) {
                 case 0:
                     x = x + step;
@@ -36,11 +40,7 @@ function draw() {
                     y = y + step;
                     break;
             }
-
-            line(xOld, yOld, x, y);
-            if (random(1) < 0.2) {
-                ellipse(x, y, 10, 10);
-            }
+            count++
         }
 
         if (direction < 3) {
@@ -49,7 +49,5 @@ function draw() {
             direction = 0
         }
     }
-    noLoop();
-
 }
 
